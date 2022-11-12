@@ -1,31 +1,20 @@
 import React, { Component } from "react";
 import TableComponent from "../components/TableComponent";
+import { connect } from "react-redux";
+import { getUsersList } from "../actions/userAction";
 
-export default class HomePage extends Component {
-  state = {
-    users: [
-      {
-        id: "abcd",
-        name: "Abjad",
-        origin: "Indonesia",
-        temperament: "Active",
-        description: "Sangat Lincah",
-      },
-      {
-        id: "bcde",
-        name: "Abjad 2",
-        origin: "Malaysia",
-        temperament: "Strong",
-        description: "Sangat Manja",
-      },
-    ],
-  };
+class HomePage extends Component {
+  componentDidMount() {
+    this.props.dispatch(getUsersList());
+  }
   render() {
     return (
       <div>
-        <h1 className="text-center mb-4">List About Cats</h1>
-        <TableComponent users={this.state.users} />
+        <h1 className="text-center mb-4">List Pokemon</h1>
+        <TableComponent />
       </div>
     );
   }
 }
+
+export default connect()(HomePage);

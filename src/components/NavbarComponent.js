@@ -18,7 +18,7 @@ function NavbarComponent(props) {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">AboutCat</NavbarBrand>
+        <NavbarBrand href="/">Pokemon</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>

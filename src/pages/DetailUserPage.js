@@ -4,6 +4,7 @@ import BackComponent from "../components/BackComponent";
 
 export default class DetailUserPage extends Component {
   render() {
+    console.log(this.props);
     return (
       <Container>
         <BackComponent />
